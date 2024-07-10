@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment | Find Your Hangout</title>
+  <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <script>
+        const nameSpan = document.getElementById("name");
+        const emailSpan = document.getElementById("email");
+        const phoneSpan = document.getElementById("phone");
+        const bookingTypeSpan = document.getElementById("booking-type");
+        const dateSpan = document.getElementById("date");
+        const timeSpan = document.getElementById("time");
+        const totalAmountSpan = document.getElementById("total-amount");
+      
+        // Assuming you have booking data stored in variables (replace with your logic)
+        const bookingName = "John Doe";
+        const bookingEmail = "johndoe@example.com";
+        const bookingPhone = "+1234567890"; // Optional
+        const bookingType = "Movie Tickets";
+        const bookingDate = "2024-06-22";
+        const bookingTime = "10:00 AM";
+        const bookingTotal = 15.00; // Replace with actual amount
+      
+        nameSpan.textContent = bookingName;
+        emailSpan.textContent = bookingEmail;
+        phoneSpan.textContent = bookingPhone;
+        bookingTypeSpan.textContent = bookingType;
+        dateSpan.textContent = bookingDate;
+        timeSpan.textContent = bookingTime;
+        totalAmountSpan.textContent = bookingTotal.toFixed(2);  // Format as currency
+      </script>
+      
+      
+    
+  <main>
+    <h2>Payment Confirmation</h2>
+    <p>Thank you for booking with Find Your Hangout! Please confirm your payment to complete your booking.</p>
+
+    <section class="payment-details">
+      <h3>Booking Details</h3>
+      <ul>
+        <li>Name: <span id="name"></span></li>
+        <li>Date: <span id="date"></span></li>
+        <li>Time: <span id="time"></span></li>
+        </ul>
+    </section>
+
+    <section class="payment-gateway">
+      <h3>Payment Gateway</h3>
+      <p>Please click the button below to proceed with the payment.</p>
+      <a href="conform.html"><button class="location-btn">Pay Now</button></a> 
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Find Your Hangout</p>
+  </footer>
+</body>
+</html>

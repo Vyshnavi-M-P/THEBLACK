@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+  <title></title>
+  <style type = "text/css">
+  *{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background-image:url();
+  }
+  body{
+    height: 100%;
+    width: 100%;
+    background-image: url(https://travel.home.sndimg.com/content/dam/images/travel/fullrights/2017/3/24/CI_HawaiiFoodandWineFest_BeachFestivals.jpg.rend.hgtvcom.616.462.suffix/1491594136347.jpeg);
+    background-position: center;
+    background-size: cover;
+    
+  }
+  .login-form{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      
+  }
+  .form-box{
+    width: 300px;
+    height: 450px;
+    position: relative;
+    margin: 8% auto;
+    background: rgba(192, 183, 183, 0.8);
+    padding: 50px;
+    box-shadow: 0 0 20px 9px #35231cfc;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column; 
+  }
+  .input-group{
+    top:130px;
+    position: absolute;
+    width: 300px;
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+  }
+  .input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 15px 0;
+    font-size: 16px;
+    color: #080606;
+    font-weight: 200px;
+    border-left:12px;
+    border-top:0;
+    border-right:0;
+    border-bottom: 2px solid #270e0e;
+    outline : none;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+  }
+
+  .button {
+    background-color: #3498db; /* Blue background color */
+    color: #fff; /* White text color */
+    padding: 15px 30px; /* Adjust padding for desired button size */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Indicate interactive element on hover */
+    font-family: sans-serif; /* Consistent font family */
+    font-size: 16px; /* Adjust font size for readability */
+    text-align: center; /* Center text within the button */
+    text-decoration: none; /* Remove underline from text */
+    transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+  }
+  
+  .button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+  }
+  
+  .checkbox{
+    margin: 30px 10px 30px 0;
+  }
+  span{
+    color:#1f1c1c;
+    font-size: 15px;
+    bottom: 68px;
+    position: absolute;
+  }
+  #login{
+    left: 50px;
+  }
+
+
+/*responsive*/
+@media only screen and(max-width:767px){
+body{
+  min-width: 100%;
+  padding: 30px;
+}
+.form-box{
+  min-width: 100%;
+}
+}
+</style>
+
+<script type = "text/javascript">
+
+  var check_userid = /^[a-z]+$/;
+ var check_email= /^[a-zA-Z]{2,}[.]?[-]?[A-Za-z0-9]{1,}[@]{1}[a-zA-Z0-9]{1,}[.][a-zA-Z]{2,4}([.]{1}[a-zA-Z]{2,4})?$/;
+  var check_password =/^(?=^.{8,}$)(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])[a-zA-Z0-9]+$/;
+
+  function validation(){
+    var user= document.getElementById('userid').value;
+   var email= document.getElementById("emailid").value;
+    var password= document.getElementById('passwordid').value;
+
+	if(user == ""){
+		alert("Please enter a valid userid");
+		return false;
+	}
+if (email==""){
+  alert("please enter valid id");
+  return false;
+}
+ 	if(password == ""){
+		alert("Please enter a valid password");
+		return false;
+	}
+
+    if(!check_userid.test(user)){
+     alert("user id must contain a-z");
+		return false;
+	}
+if(!check_emailid.test(email)){
+  alert("email id must contain a-z,number");
+  return false;
+}
+    if(!check_password.test(password)){
+      alert("password must contain length 8 with atleast one number , atleast one uppercase letter, atleast one lowercase letter ");
+		return false;
+	 }
+
+	alert("Login Successful");
+	return true;
+  }
+
+
+</script>
+
+
+	<body>
+	<section class = "login-form">
+		<div class ="form-box">
+			<form method ="post" id="login" class="input-group" action="#" onsubmit= "return validation();" >
+				<div >
+					<input type ="text" class ="input-field" id= "userid" placeholder="User Id">
+				</div>
+
+        <div>
+          <input type ="text" class="input-field" id="emailid" placeholder="email Id">
+        </div>
+        
+				<div>
+					<input type ="password" class ="input-field" id="passwordid" placeholder="Enter Password">
+				</div>
+
+			
+ 
+ 
+        <a href="home.html" class="button">Login</a>
+			</form>
+		</div>
+	</section>
+	</body>
+</html>

@@ -1,0 +1,143 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://tse1.mm.bing.net/th?id=OIP.7TEdI0WX6nBjtjQAoKmmnwHaEK&pid=Api&P=0&h=220"); /* Replace with the actual image URL */
+  background-repeat: no-repeat;
+  background-position: center; /* Center the image horizontally */
+  background-size: cover; 
+  background-size: 150%;
+  }
+  
+  p{
+    align-content: top;
+  }
+  header {
+    background-color: #333;
+    padding: 20px;
+    align-items: center; 
+    display: flex; 
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    
+  }
+  
+  h1,
+  h2 {
+    margin: 0;
+    h1 {
+      font-size: 2em; /* Adjust heading size as needed */
+      margin: 0; /* Remove default margins */
+    }
+  }
+  
+  
+  .slider {
+    position: relative;
+    height: 60vh; /* Set half screen height */
+    overflow: hidden; /* Hide overflowing content (optional) */
+  }
+  
+  .slider-images img {
+    width: calc(66.66% - 10px); /* Adjust width based on space */
+    height: 100%;
+    object-fit: cover;
+    margin: 0 5px; /* Add margin for spacing */
+  }
+  
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-200%); /* Slide all images by 200% width */
+    }
+  }
+ 
+  .slider-images {
+    display: flex;
+    width: calc(100% * 3); /* 3 images, 100% width each */
+    animation: slide 15s infinite ease-in-out; /* Animation properties */
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%); /* Slide all images to the left by 100% width */
+    }
+  }
+  
+  
+  .content {
+    padding: 20px;
+  }
+  
+  footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+  }
+  .categories {
+    text-align: center;
+    margin: 20px 10px; /* Add some margin for spacing */
+    font-size: 30px;
+
+  }
+  
+  .category-btn {
+    background-color: #333;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    margin: 20px 10px; /* Add some margin between buttons */
+    cursor: pointer;
+    color: #fff;
+    font-size: 19px;
+  }
+  .category-btn:hover {
+    background-color: #e6eaee; /* Slight background change on hover */
+  }
+
+
+
+  .search-bar {
+    position: relative; /* Needed for proper positioning of icon */
+    background-color: #dde5ea; /* Blue background color */
+    color: #333; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden; /* Prevent text overflow */
+    padding: 10px 20px 10px 10px; /* Adjust padding for spacing and icon */
+    display: flex; /* Make search bar a flex container */
+  }
+  
+  .search-bar input[type="search"] {
+    width: 100%; /* Stretch input to fill container */
+    padding: 0; /* Remove default padding */
+    border: none; /* Remove default border */
+    outline: none; /* Remove outline on focus */
+    font-family: sans-serif; /* Consistent font */
+    font-size: 16px; /* Adjust font size for readability */
+    color: inherit; /* Inherit color from parent (.search-bar) */
+  }
+  
+  .search-bar button {
+    border: none; /* Remove default border */
+    background: none; /* Remove default background */
+    padding: 0; /* Remove default padding */
+    cursor: pointer; /* Indicate interactivity on hover */
+  }
+  
+  .search-icon {
+    fill: currentColor; /* Inherit color from parent (.search-bar) */
+    width: 20px;
+    height: 20px;
+    margin-right: 5px; /* Add spacing between icon and text */
+  }

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Ticket Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #666;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .location,
+.locations li {
+  margin: 10px 0; /* Add some margin for spacing */
+}
+
+.location h2,
+.locations li h2 {
+  margin-bottom: 5px; /* Add some space between heading and address */
+}
+
+.location-btn {
+  background-color: #333;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+
+}
+
+.location-btn:hover {
+  background-color: #eee; /* Slight background change on hover */
+}
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1>Book Your Tickets Online</h1>
+        </header>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+            <small>Format: 1234567890</small>
+            
+            <label for="event">Select Event:</label>
+            <select id="event" name="event" required>
+                <option value="">-- Select Event --</option>
+                <option value="concert">Zoo</option>
+                <option value="concert">Pubs</option>
+                <option value="concert">Gaming</option>
+                <option value="movie">Malls</option>
+                <option value="play">HollyWood</option>
+                <option value="concert">Go Karting</option>
+               
+            </select>
+            
+            <label for="date">Date of Event:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="tickets">Number of Tickets:</label>
+            <input type="number" id="tickets" name="tickets" min="1" required>
+            
+            <label for="special_requests">Special Requests:</label>
+            <textarea id="special_requests" name="special_requests" rows="4"></textarea>
+            
+            <label for="card_number">Card Number:</label>
+            <input type="text" id="card_number" name="card_number" pattern="[0-9]{16}" required>
+            <small>Enter 16-digit card number without spaces</small>
+            
+            <label for="expiry">Expiry Date:</label>
+            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" pattern="(0[1-9]|1[0-2])\/([0-9]{2})" required>
+            <small>Format: MM/YY</small>
+            
+           
+           
+            
+            <a href="payment.html"><button class="location-btn">Book</button></a> 
+           
+        </form>
+    </div>
+</body>
+</html>
